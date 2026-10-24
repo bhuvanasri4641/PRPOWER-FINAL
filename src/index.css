@@ -1,0 +1,269 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Corporate Design System for PR Power and Infrastructures */
+@layer base {
+  :root {
+    /* Corporate Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Steel Blue - Primary Brand Color */
+    --primary: 210 70% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 210 70% 45%;
+    --primary-dark: 210 70% 25%;
+
+    /* Gold/Orange - Accent Color */
+    --secondary: 35 85% 55%;
+    --secondary-foreground: 215 25% 15%;
+    --secondary-light: 35 85% 65%;
+    --secondary-dark: 35 85% 45%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 215 25% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 70% 35%;
+
+    --radius: 0.75rem;
+
+    /* Corporate Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 70% 35%), hsl(210 70% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(35 85% 55%), hsl(35 85% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 70% 35%), hsl(210 70% 25%), hsl(35 85% 55%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
+
+    /* Corporate Shadows */
+    --shadow-corporate: 0 10px 30px -10px hsl(210 70% 35% / 0.3);
+    --shadow-glow: 0 0 40px hsl(210 70% 45% / 0.2);
+    --shadow-card: 0 4px 20px -2px hsl(210 70% 35% / 0.1);
+
+    /* Animation Variables */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 70% 55%;
+    --primary-foreground: 215 25% 8%;
+    --primary-light: 210 70% 65%;
+    --primary-dark: 210 70% 45%;
+
+    --secondary: 35 85% 65%;
+    --secondary-foreground: 215 25% 8%;
+    --secondary-light: 35 85% 75%;
+    --secondary-dark: 35 85% 55%;
+
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 215 25% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 15%;
+    --input: 215 25% 15%;
+    --ring: 210 70% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210 70% 55%), hsl(210 70% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(35 85% 65%), hsl(35 85% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 70% 55%), hsl(210 70% 45%), hsl(35 85% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 25% 8%), hsl(215 25% 12%));
+
+    --shadow-corporate: 0 10px 30px -10px hsl(210 70% 55% / 0.4);
+    --shadow-glow: 0 0 40px hsl(210 70% 65% / 0.3);
+    --shadow-card: 0 4px 20px -2px hsl(210 70% 55% / 0.2);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  /* Custom Typography */
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Corporate Button Variants */
+  .btn-corporate {
+    @apply bg-gradient-to-r from-primary to-primary-light text-primary-foreground;
+    @apply px-8 py-4 rounded-xl font-semibold tracking-wide;
+    @apply shadow-corporate hover:shadow-glow;
+    @apply transform hover:scale-105 transition-all duration-300;
+    @apply hover:from-primary-light hover:to-primary;
+  }
+
+  .btn-secondary-corporate {
+    @apply bg-gradient-to-r from-secondary to-secondary-light text-secondary-foreground;
+    @apply px-8 py-4 rounded-xl font-semibold tracking-wide;
+    @apply transform hover:scale-105 transition-all duration-300;
+    @apply hover:from-secondary-light hover:to-secondary;
+  }
+
+  .btn-outline-corporate {
+    @apply border-2 border-primary text-primary bg-transparent;
+    @apply px-8 py-4 rounded-xl font-semibold tracking-wide;
+    @apply hover:bg-primary hover:text-primary-foreground;
+    @apply transform hover:scale-105 transition-all duration-300;
+  }
+
+  /* Corporate Cards */
+  .card-corporate {
+    @apply bg-card border border-border rounded-2xl;
+    @apply shadow-card hover:shadow-corporate;
+    @apply transform hover:-translate-y-2 transition-all duration-300;
+    @apply p-8;
+  }
+
+  /* Hero Text Gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Corporate Animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .animate-fade-in-up,
+    .animate-scale-in,
+    .animate-slide-in-right {
+      animation: fadeInMobile 0.45s ease-out forwards;
+    }
+  }
+
+  @keyframes fadeInMobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .btn-corporate,
+    .btn-secondary-corporate,
+    .btn-outline-corporate,
+    .card-corporate {
+      transform: none;
+    }
+  }
+
+  /* Corporate Section Backgrounds */
+  .bg-corporate-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-subtle-gradient {
+    background: var(--gradient-subtle);
+  }
+}
