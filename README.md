@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PR Power Website
 
 A modern and visually engaging web platform built to deliver seamless navigation, professional branding, and a fully responsive user experience.
@@ -128,3 +129,6 @@ Support by starring the repository so more people can discover it.
 ```
 
 
+=======
+# PRPOWER-FINAL
+>>>>>>> cc538901ed9be95a17d3ec3b2a7746da7f00d0fa
