@@ -86,12 +86,6 @@ https://pr-power.netlify.app/
 
 ## 🚀 Getting Started
 
-Clone the repo:
-
-```bash
-git clone https://github.com/Aswini1008/PRPower.git
-cd PRPower
-```
 
 Install dependencies:
 
